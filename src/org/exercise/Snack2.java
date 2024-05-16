@@ -39,7 +39,7 @@ public class Snack2 {
             selectedNames[indexRandomName] = true;
             selectedSurnames[indexRandomSurname] = true;
 
-            // Stampiamo il nome e il cognome accoppiati
+            // Stampo il nome e il cognome accoppiati
             System.out.println(guestsNames[indexRandomName] + " " + guestsSurnames[indexRandomSurname]);
         }
     }
