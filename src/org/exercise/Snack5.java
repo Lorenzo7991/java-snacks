@@ -14,26 +14,34 @@ public class Snack5 {
         String word;
 
         // Iterazione Input utente con condizione di uscita "0"
-        while (true){
+        while (true) {
             System.out.println("Inserisci una parola: (o 0 per uscire)");
-            word = scanner.nextLine().toLowerCase();
+            word = scanner.nextLine();
 
-            if (word.equals("0")){
+            if (word.equals("0")) {
                 System.out.println("Programma terminato");
                 break;
             } else {
-                int totalChar = word.length();
-                int totalSimbols = 0;
-                // Iterazione conteggio simboli tramite regex
-                for (int i = 0; i < word.length(); i++){
+                int totalChars = 0;
+                int totalNumbers = 0;
+                int totalSymbols = 0;
+
+                // Iterazione per il conteggio dei diversi tipi di caratteri
+                for (int i = 0; i < word.length(); i++) {
                     char character = word.charAt(i);
-                    if (!Character.toString(character).matches("[a-zA-Z0-9]")){
-                        totalSimbols++;
+
+                    if (Character.isLetter(character)) {
+                        totalChars++;
+                    } else if (Character.isDigit(character)) {
+                        totalNumbers++;
+                    } else {
+                        totalSymbols++;
                     }
                 }
 
-                System.out.println("Numero totale di caratter:" + totalChar);
-                System.out.println("Numero di simboli non alfanumerici:" + totalSimbols);
+                System.out.println("Numero di caratteri alfabetici: " + totalChars);
+                System.out.println("Numero di numeri: " + totalNumbers);
+                System.out.println("Numero di simboli non alfanumerici: " + totalSymbols);
             }
         }
 

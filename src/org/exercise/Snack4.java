@@ -22,7 +22,7 @@ public class Snack4 {
         // Validazione stringa (se è o meno palindroma)
         for (int i = 0; i < word.length() / 2; i++) {
             if (word.charAt(i) != word.charAt(word.length() - i - 1)) {
-                // Se i caratteri corrispondenti non sono uguali,w non è palindroma
+                // Se i caratteri corrispondenti non sono uguali, non è palindroma
                 isPalindrome = false;
                 break;
             } else {
